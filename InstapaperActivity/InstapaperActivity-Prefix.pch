@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'InstapaperActivity' target in the 'InstapaperActivity' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
