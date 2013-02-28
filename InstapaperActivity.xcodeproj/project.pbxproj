@@ -7,23 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213D597E16DDE612009D3C47 /* UIInstapaperActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D597C16DDE612009D3C47 /* UIInstapaperActivity.h */; };
+		213D597F16DDE612009D3C47 /* UIInstapaperActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D597D16DDE612009D3C47 /* UIInstapaperActivity.m */; };
+		213D598216DDF36D009D3C47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213D598016DDF361009D3C47 /* UIKit.framework */; };
+		213D59E416DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */; };
+		213D59E516DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */; };
+		213D59F116DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59EC16DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h */; };
+		213D59F216DF161B009D3C47 /* ZYInstapaperActivityItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59ED16DF161B009D3C47 /* ZYInstapaperActivityItem.h */; };
+		213D59F316DF161B009D3C47 /* ZYInstapaperActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59EE16DF161B009D3C47 /* ZYInstapaperActivityItem.m */; };
+		213D59F616DF303B009D3C47 /* InstapaperActivityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59F416DF303B009D3C47 /* InstapaperActivityRequest.h */; };
+		213D59F716DF303B009D3C47 /* InstapaperActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59F516DF303B009D3C47 /* InstapaperActivityRequest.m */; };
 		2176FC0716DD55B600750E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2176FC0616DD55B600750E5C /* Foundation.framework */; };
 		2176FC1816DD55B600750E5C /* InstapaperActivity.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2176FC1716DD55B600750E5C /* InstapaperActivity.mm */; };
+		21F2E88A16DDBA0D000A92E0 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213D597C16DDE612009D3C47 /* UIInstapaperActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInstapaperActivity.h; sourceTree = "<group>"; };
+		213D597D16DDE612009D3C47 /* UIInstapaperActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIInstapaperActivity.m; sourceTree = "<group>"; };
+		213D598016DDF361009D3C47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		213D598F16DEEEC6009D3C47 /* SpringBoard.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = SpringBoard.app; sourceTree = "<group>"; };
+		213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageNamedExtension.h"; sourceTree = "<group>"; };
+		213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageNamedExtension.m"; sourceTree = "<group>"; };
+		213D59E816DF161B009D3C47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		213D59EC16DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYInstapaperAddRequestDelegate.h; sourceTree = "<group>"; };
+		213D59ED16DF161B009D3C47 /* ZYInstapaperActivityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYInstapaperActivityItem.h; sourceTree = "<group>"; };
+		213D59EE16DF161B009D3C47 /* ZYInstapaperActivityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYInstapaperActivityItem.m; sourceTree = "<group>"; };
+		213D59F416DF303B009D3C47 /* InstapaperActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstapaperActivityRequest.h; sourceTree = "<group>"; };
+		213D59F516DF303B009D3C47 /* InstapaperActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstapaperActivityRequest.m; sourceTree = "<group>"; };
 		2176FC0316DD55B600750E5C /* InstapaperActivity.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = InstapaperActivity.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		2176FC0616DD55B600750E5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2176FC0B16DD55B600750E5C /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
 		2176FC0C16DD55B600750E5C /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		2176FC0E16DD55B600750E5C /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		2176FC1216DD55B600750E5C /* InstapaperActivity.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = InstapaperActivity.plist; path = Package/Library/PreferenceLoader/Preferences/InstapaperActivity.plist; sourceTree = "<group>"; };
 		2176FC1316DD55B600750E5C /* InstapaperActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InstapaperActivityIcon.png; path = Package/Library/PreferenceLoader/Preferences/InstapaperActivityIcon.png; sourceTree = "<group>"; };
 		2176FC1416DD55B600750E5C /* InstapaperActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "InstapaperActivityIcon@2x.png"; path = "Package/Library/PreferenceLoader/Preferences/InstapaperActivityIcon@2x.png"; sourceTree = "<group>"; };
 		2176FC1516DD55B600750E5C /* InstapaperActivity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstapaperActivity-Prefix.pch"; sourceTree = "<group>"; };
-		2176FC1616DD55B600750E5C /* InstapaperActivity.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = InstapaperActivity.xm; sourceTree = "<group>"; };
+		2176FC1616DD55B600750E5C /* InstapaperActivity.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InstapaperActivity.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2176FC1716DD55B600750E5C /* InstapaperActivity.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InstapaperActivity.mm; sourceTree = "<group>"; };
 		2176FC1B16DD55B600750E5C /* InstapaperActivity.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = InstapaperActivity.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/InstapaperActivity.plist; sourceTree = "<group>"; };
+		21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = /opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,13 +54,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213D598216DDF36D009D3C47 /* UIKit.framework in Frameworks */,
 				2176FC0716DD55B600750E5C /* Foundation.framework in Frameworks */,
+				21F2E88A16DDBA0D000A92E0 /* libsubstrate.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213D598316DEBFE5009D3C47 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				213D598416DEBFE5009D3C47 /* Library */,
+			);
+			name = System;
+			path = Package/System;
+			sourceTree = "<group>";
+		};
+		213D598416DEBFE5009D3C47 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				213D598516DEBFE5009D3C47 /* CoreServices */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		213D598516DEBFE5009D3C47 /* CoreServices */ = {
+			isa = PBXGroup;
+			children = (
+				213D598F16DEEEC6009D3C47 /* SpringBoard.app */,
+			);
+			path = CoreServices;
+			sourceTree = "<group>";
+		};
+		213D59E616DF1544009D3C47 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */,
+				213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */,
+				213D597C16DDE612009D3C47 /* UIInstapaperActivity.h */,
+				213D597D16DDE612009D3C47 /* UIInstapaperActivity.m */,
+				213D59F416DF303B009D3C47 /* InstapaperActivityRequest.h */,
+				213D59F516DF303B009D3C47 /* InstapaperActivityRequest.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		213D59E716DF161B009D3C47 /* ZYInstapaperActivity */ = {
+			isa = PBXGroup;
+			children = (
+				213D59E816DF161B009D3C47 /* README.md */,
+				213D59E916DF161B009D3C47 /* Requests */,
+				213D59ED16DF161B009D3C47 /* ZYInstapaperActivityItem.h */,
+				213D59EE16DF161B009D3C47 /* ZYInstapaperActivityItem.m */,
+			);
+			path = ZYInstapaperActivity;
+			sourceTree = "<group>";
+		};
+		213D59E916DF161B009D3C47 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				213D59EC16DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		2176FBF816DD55B600750E5C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +140,8 @@
 		2176FC0516DD55B600750E5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */,
+				213D598016DDF361009D3C47 /* UIKit.framework */,
 				2176FC0616DD55B600750E5C /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -67,8 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				2176FC1616DD55B600750E5C /* InstapaperActivity.xm */,
-				2176FC1716DD55B600750E5C /* InstapaperActivity.mm */,
+				213D59E616DF1544009D3C47 /* Classes */,
 				2176FC0916DD55B600750E5C /* Package */,
+				213D59E716DF161B009D3C47 /* ZYInstapaperActivity */,
 				2176FC0D16DD55B600750E5C /* Supporting Files */,
 			);
 			path = InstapaperActivity;
@@ -79,6 +164,7 @@
 			children = (
 				2176FC0A16DD55B600750E5C /* DEBIAN */,
 				2176FC0F16DD55B600750E5C /* Library */,
+				213D598316DEBFE5009D3C47 /* System */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -86,7 +172,6 @@
 		2176FC0A16DD55B600750E5C /* DEBIAN */ = {
 			isa = PBXGroup;
 			children = (
-				2176FC0B16DD55B600750E5C /* control.txt */,
 				2176FC0C16DD55B600750E5C /* control */,
 			);
 			name = DEBIAN;
@@ -95,6 +180,7 @@
 		2176FC0D16DD55B600750E5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2176FC1716DD55B600750E5C /* InstapaperActivity.mm */,
 				2176FC0E16DD55B600750E5C /* PackageVersion.plist */,
 				2176FC1516DD55B600750E5C /* InstapaperActivity-Prefix.pch */,
 			);
@@ -151,6 +237,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213D597E16DDE612009D3C47 /* UIInstapaperActivity.h in Headers */,
+				213D59E416DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h in Headers */,
+				213D59F116DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h in Headers */,
+				213D59F216DF161B009D3C47 /* ZYInstapaperActivityItem.h in Headers */,
+				213D59F616DF303B009D3C47 /* InstapaperActivityRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2176FC1E16DD55B600750E5C /* Build configuration list for PBXNativeTarget "InstapaperActivity" */;
 			buildPhases = (
-				2176FBFD16DD55B600750E5C /* ShellScript */,
+				2176FBFD16DD55B600750E5C /* Run Script */,
 				2176FBFE16DD55B600750E5C /* Sources */,
 				2176FBFF16DD55B600750E5C /* Frameworks */,
 				2176FC0016DD55B600750E5C /* Headers */,
@@ -202,13 +293,14 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2176FBFD16DD55B600750E5C /* ShellScript */ = {
+		2176FBFD16DD55B600750E5C /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2176FC1816DD55B600750E5C /* InstapaperActivity.mm in Sources */,
+				213D597F16DDE612009D3C47 /* UIInstapaperActivity.m in Sources */,
+				213D59E516DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m in Sources */,
+				213D59F316DF161B009D3C47 /* ZYInstapaperActivityItem.m in Sources */,
+				213D59F716DF303B009D3C47 /* InstapaperActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +341,7 @@
 		2176FC1C16DD55B600750E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -263,12 +359,16 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				HEADER_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/include/**",
+					"$(THEOS)/include/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				THEOS = /opt/theos;
 				VALIDATE_PRODUCT = NO;
 				iOSOpenDevPath = /opt/iOSOpenDev;
 			};
@@ -277,7 +377,7 @@
 		2176FC1D16DD55B600750E5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -288,11 +388,15 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				HEADER_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/include/**",
+					"$(THEOS)/include/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				THEOS = /opt/theos;
 				VALIDATE_PRODUCT = YES;
 				iOSOpenDevPath = /opt/iOSOpenDev;
 			};
@@ -301,17 +405,22 @@
 		2176FC1F16DD55B600750E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstapaperActivity/InstapaperActivity-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
-				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnAnyBuild = YES;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = YES;
@@ -321,17 +430,22 @@
 		2176FC2016DD55B600750E5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstapaperActivity/InstapaperActivity-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
-				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnAnyBuild = YES;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = YES;
@@ -357,6 +471,7 @@
 				2176FC2016DD55B600750E5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

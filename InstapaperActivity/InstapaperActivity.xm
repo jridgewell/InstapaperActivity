@@ -1,39 +1,67 @@
+#import <UIKit/UIKit.h>
+#import "UIInstapaperActivity.h"
 
-// Logos by Dustin Howett
-// See http://iphonedevwiki.net/index.php/Logos
+#define PREFERENCES_PATH @"/var/mobile/Library/Preferences/name.ridgewell.InstapaperActivity.plist"
+#define READING_LIST_ACTIVITY_TYPE @"com.apple.mobilesafari.activity.addToReadingList"
 
-#error iOSOpenDev post-project creation from template requirements (remove these lines after completed) -- \
-	Link to libsubstrate.dylib: \
-	(1) go to TARGETS > Build Phases > Link Binary With Libraries and add /opt/iOSOpenDev/lib/libsubstrate.dylib \
-	(2) remove these lines from *.xm files (not *.mm files as they're automatically generated from *.xm files)
+static BOOL instapaperActivityIsEnabled;
+static NSString *instapaperUsername;
+static NSString *instapaperPassword;
 
-%hook ClassName
-
-+ (id)sharedInstance
-{
-	%log;
-
-	return %orig;
+%hook UIActivityViewController
+- (NSArray *)excludedActivityTypes {
+	NSArray *originalExcludes = %orig;
+	if (instapaperActivityIsEnabled) {
+		NSMutableArray *excludes = [NSMutableArray arrayWithArray:originalExcludes];
+		[excludes addObject:READING_LIST_ACTIVITY_TYPE];
+		originalExcludes = [NSArray arrayWithArray:excludes];
+	}
+	return originalExcludes;
 }
 
-- (void)messageWithNoReturnAndOneArgument:(id)originalArgument
-{
-	%log;
-
-	%orig(originalArgument);
-	
-	// or, for exmaple, you could use a custom value instead of the original argument: %orig(customValue);
+- (id)initWithActivityItems:(NSArray *)activityItems applicationActivities:(NSArray *)applicationActivities {
+	NSArray *activities = applicationActivities;
+	if (instapaperActivityIsEnabled) {
+		NSMutableArray *array = [NSMutableArray arrayWithArray:applicationActivities];
+		UIInstapaperActivity *instapaperActivity = [UIInstapaperActivity instance];
+		instapaperActivity.username = instapaperUsername;
+		instapaperActivity.password = instapaperPassword;
+		[array addObject:instapaperActivity];
+		activities = [NSArray arrayWithArray:array];
+	}
+	return %orig(activityItems, activities);
 }
-
-- (id)messageWithReturnAndNoArguments
-{
-	%log;
-
-	id originalReturnOfMessage = %orig;
-	
-	// for example, you could modify the original return value before returning it: [SomeOtherClass doSomethingToThisObject:originalReturnOfMessage];
-
-	return originalReturnOfMessage;
-}
-
 %end
+
+#pragma mark - Settings
+
+static void LoadSettings() {
+	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:PREFERENCES_PATH];
+	
+	id enablePref = [dict objectForKey:@"enabled"];
+	instapaperActivityIsEnabled = enablePref ? [enablePref boolValue] : YES;
+	DLog(@"%i", instapaperActivityIsEnabled);
+
+	if (instapaperActivityIsEnabled) {
+		id usernamePref = [dict objectForKey:@"username"];
+		id passwordPref = [dict objectForKey:@"password"];
+		instapaperUsername = usernamePref ? usernamePref : @"";
+		instapaperPassword = passwordPref ? passwordPref : @"";
+		DLog(@"%@", instapaperUsername);
+		DLog(@"%@", instapaperPassword);
+	} else {
+		instapaperUsername = nil;
+		instapaperPassword = nil;
+	}
+}
+
+static void SettingsChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+	LoadSettings();
+}
+
+%ctor {
+	@autoreleasepool {
+		LoadSettings();
+		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, SettingsChanged, CFSTR("name.ridgewell.InstapaperActivity.settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+	}
+}
