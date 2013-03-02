@@ -2,8 +2,7 @@
 //  UIImage+ImageNamedExtension.m
 //  InstapaperActivity
 //
-//  Created by Justin Ridgewell on 2/27/13.
-//
+//  http://stackoverflow.com/questions/4754551/iphone-use-external-image-in-uiimage-imagenamed
 //
 
 #import "UIImage+ImageNamedExtension.h"
