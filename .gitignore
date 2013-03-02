@@ -20,6 +20,7 @@ build/
 *.o
 *.LinkFileList
 *.hmap
+*.dylib
 
 # Automatic backup files
 *~.nib/
