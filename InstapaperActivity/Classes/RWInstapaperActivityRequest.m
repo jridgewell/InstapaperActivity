@@ -8,6 +8,7 @@
 
 #import "RWInstapaperActivityRequest.h"
 #import "ZYInstapaperActivityItem.h"
+#import "NSData+Base64.h"
 
 #define RESPONSE_SUCCESS            @"201"
 #define RESPONSE_PASSWORD_INCORRECT @"403"
@@ -45,21 +46,24 @@
 
 - (void)startRequestWithItem:(ZYInstapaperActivityItem *)item {
 	NSString *urlString = [NSString stringWithFormat:
-						   @"https://www.instapaper.com/api/add"
-						   "?username=%@"
-						   "&password=%@"
-						   "&url=%@"
-						   "&title=%@"
-						   "&selection=%@",
-						   self.username,
-						   self.password,
-						   item.url,
-						   item.title,
+							@"https://www.instapaper.com/api/add"
+							"?url=%@"
+							"&title=%@"
+							"&selection=%@",
+							item.url,
+							item.title,
 						   item.description];
+
+	NSString *authStr = [NSString stringWithFormat:@"%@:%@", self.username, self.password];
+	NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
+	NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64Encoding]];
+
+	
 	DLog(@"%@", urlString);
 	NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	DLog(@"%@", url);
-	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+	[urlRequest setValue:authValue forHTTPHeaderField:@"Authorization"];
 	DLog(@"%@", urlRequest);
 	NSURLConnection *urlConnection = [NSURLConnection connectionWithRequest:urlRequest delegate:self];
 	DLog(@"%@", urlConnection);

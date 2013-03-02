@@ -19,6 +19,8 @@
 		213D59F716DF303B009D3C47 /* RWInstapaperActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59F516DF303B009D3C47 /* RWInstapaperActivityRequest.m */; };
 		2176FC0716DD55B600750E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2176FC0616DD55B600750E5C /* Foundation.framework */; };
 		2176FC1816DD55B600750E5C /* InstapaperActivity.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2176FC1716DD55B600750E5C /* InstapaperActivity.mm */; };
+		21950B5716E27B7A0090437F /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 21950B5516E27B7A0090437F /* NSData+Base64.h */; };
+		21950B5816E27B7A0090437F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 21950B5616E27B7A0090437F /* NSData+Base64.m */; };
 		21F2E88A16DDBA0D000A92E0 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		2176FC1B16DD55B600750E5C /* InstapaperActivity.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = InstapaperActivity.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/InstapaperActivity.plist; sourceTree = "<group>"; };
 		21950B0316E1D6C70090437F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		21950B0416E1D6EC0090437F /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		21950B5516E27B7A0090437F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		21950B5616E27B7A0090437F /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = /opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -93,12 +97,11 @@
 		213D59E616DF1544009D3C47 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */,
-				213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */,
 				213D597C16DDE612009D3C47 /* RWInstapaperActivity.h */,
 				213D597D16DDE612009D3C47 /* RWInstapaperActivity.m */,
 				213D59F416DF303B009D3C47 /* RWInstapaperActivityRequest.h */,
 				213D59F516DF303B009D3C47 /* RWInstapaperActivityRequest.m */,
+				21950B5916E27B920090437F /* Categories */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -234,6 +237,17 @@
 			name = DynamicLibraries;
 			sourceTree = "<group>";
 		};
+		21950B5916E27B920090437F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */,
+				213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */,
+				21950B5516E27B7A0090437F /* NSData+Base64.h */,
+				21950B5616E27B7A0090437F /* NSData+Base64.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -246,6 +260,7 @@
 				213D59F116DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h in Headers */,
 				213D59F216DF161B009D3C47 /* ZYInstapaperActivityItem.h in Headers */,
 				213D59F616DF303B009D3C47 /* RWInstapaperActivityRequest.h in Headers */,
+				21950B5716E27B7A0090437F /* NSData+Base64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +351,7 @@
 				213D59E516DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m in Sources */,
 				213D59F316DF161B009D3C47 /* ZYInstapaperActivityItem.m in Sources */,
 				213D59F716DF303B009D3C47 /* RWInstapaperActivityRequest.m in Sources */,
+				21950B5816E27B7A0090437F /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
