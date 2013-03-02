@@ -143,7 +143,7 @@
 	[self.request release];
 #endif
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failure", @"")
-													    message:NSLocalizedString(@"An unexpected error occured. Try again later.", @"")
+													message:NSLocalizedString(@"An unexpected error occured. Try again later.", @"")
 												   delegate:nil
 										  cancelButtonTitle:NSLocalizedString(@"OK", @"")
 										  otherButtonTitles:nil];
