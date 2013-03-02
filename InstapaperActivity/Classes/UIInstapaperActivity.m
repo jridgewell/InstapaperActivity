@@ -11,6 +11,7 @@
 
 @interface UIInstapaperActivity ()
 
+@property (strong, nonatomic) NSArray *validURLSchemes;
 @property (strong, nonatomic) NSMutableArray *activityItems;
 @property (strong, nonatomic) InstapaperActivityRequest *request;
 - (ZYInstapaperActivityItem *)canPerformWithActivityItem:(id)item;
@@ -19,6 +20,14 @@
 
 
 @implementation UIInstapaperActivity
+
+- (instancetype)init {
+    if (self = [super init]) {
+		self.activityItems = [NSMutableArray array];
+		self.validURLSchemes = @[@"http", @"https"];
+    }
+    return self;
+}
 
 + (instancetype)instance {
     static dispatch_once_t pred = 0;
@@ -76,24 +85,25 @@
 - (ZYInstapaperActivityItem *)canPerformWithActivityItem:(id)item {
 	ZYInstapaperActivityItem *activityItem = nil;
 	
-	//If it's an InstapaperActivityItem (internal, non-empty URL is guaranteed).
-	if ([item isKindOfClass:[ZYInstapaperActivityItem class]] == YES) {
-		activityItem = item;
+	//If it's a well formated URL string.
+	if ([item isKindOfClass:[NSString class]] == YES) {
+		item = [NSURL URLWithString:item];
 	}
 	//If it's a non-empty URL.
-	else if ([item isKindOfClass:[NSURL class]] == YES) {
-		activityItem = [[ZYInstapaperActivityItem alloc] initWithURL:item];
-	}
-	//If it's a well formated URL string.
-	else if ([item isKindOfClass:[NSString class]] == YES) {
-		NSURL *url = [NSURL URLWithString:item];
-		if (url) {
+	if ([item isKindOfClass:[NSURL class]] == YES) {
+		NSString *scheme = [item scheme];
+		if ([self.validURLSchemes containsObject:scheme]) {
 			activityItem = [[ZYInstapaperActivityItem alloc] initWithURL:item];
 		}
 	}
-	
 	DLog(@"%@", activityItem);
-	return activityItem;
+
+	//If it's an InstapaperActivityItem (internal, non-empty URL is guaranteed).
+	if ([item isKindOfClass:[ZYInstapaperActivityItem class]] == YES) {
+		return activityItem;
+	}
+	
+	return nil;
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
@@ -125,6 +135,7 @@
 
 - (void)instapaperAddRequestFailed:(id)request {
 	DLog();
+	//TODO: This should really be a UIView...
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failure", @"")
 													message:NSLocalizedString(@"An unexpected error occured. Try again later.", @"")
 												   delegate:nil
@@ -136,6 +147,7 @@
 
 - (void)instapaperAddRequestIncorrectPassword:(id)request {
 	DLog();
+	//TODO: This should really be a UIView...
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"")
 													message:NSLocalizedString(@"Incorrect password. Please correct in Settings.app", @"")
 												   delegate:nil
