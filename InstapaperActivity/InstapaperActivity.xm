@@ -1,7 +1,8 @@
 #import <UIKit/UIKit.h>
-#import "UIInstapaperActivity.h"
+#import "RWInstapaperActivity.h"
 
-#define PREFERENCES_PATH @"/var/mobile/Library/Preferences/name.ridgewell.InstapaperActivity.plist"
+#define PREFERENCES_PATH @"/var/mobile/Library/Preferences/"
+#define PREFERENCES_FILE PREFERENCES_PATH APP_ID @".plist"
 #define READING_LIST_ACTIVITY_TYPE @"com.apple.mobilesafari.activity.addToReadingList"
 
 static BOOL instapaperActivityIsEnabled;
@@ -12,9 +13,7 @@ static NSString *instapaperPassword;
 - (NSArray *)excludedActivityTypes {
 	NSArray *originalExcludes = %orig;
 	if (instapaperActivityIsEnabled) {
-		NSMutableArray *excludes = [NSMutableArray arrayWithArray:originalExcludes];
-		[excludes addObject:READING_LIST_ACTIVITY_TYPE];
-		originalExcludes = [NSArray arrayWithArray:excludes];
+		originalExcludes = [originalExcludes arrayByAddingObject:READING_LIST_ACTIVITY_TYPE];
 	}
 	return originalExcludes;
 }
@@ -22,12 +21,8 @@ static NSString *instapaperPassword;
 - (id)initWithActivityItems:(NSArray *)activityItems applicationActivities:(NSArray *)applicationActivities {
 	NSArray *activities = applicationActivities;
 	if (instapaperActivityIsEnabled) {
-		NSMutableArray *array = [NSMutableArray arrayWithArray:applicationActivities];
-		UIInstapaperActivity *instapaperActivity = [UIInstapaperActivity instance];
-		instapaperActivity.username = instapaperUsername;
-		instapaperActivity.password = instapaperPassword;
-		[array addObject:instapaperActivity];
-		activities = [NSArray arrayWithArray:array];
+		RWInstapaperActivity *instapaperActivity = [RWInstapaperActivity instance];
+		activities = [activities arrayByAddingObject:instapaperActivity];
 	}
 	return %orig(activityItems, activities);
 }
@@ -35,8 +30,14 @@ static NSString *instapaperPassword;
 
 #pragma mark - Settings
 
+static void updateInstapaperCredentials() {
+	RWInstapaperActivity *instapaperActivity = [RWInstapaperActivity instance];
+	instapaperActivity.username = instapaperUsername;
+	instapaperActivity.password = instapaperPassword;
+}
+
 static void LoadSettings() {
-	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:PREFERENCES_PATH];
+	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:PREFERENCES_FILE];
 	
 	id enablePref = [dict objectForKey:@"enabled"];
 	instapaperActivityIsEnabled = enablePref ? [enablePref boolValue] : YES;
@@ -47,6 +48,7 @@ static void LoadSettings() {
 		id passwordPref = [dict objectForKey:@"password"];
 		instapaperUsername = usernamePref ? usernamePref : @"";
 		instapaperPassword = passwordPref ? passwordPref : @"";
+		updateInstapaperCredentials();
 		DLog(@"%@", instapaperUsername);
 		DLog(@"%@", instapaperPassword);
 	} else {
@@ -62,6 +64,6 @@ static void SettingsChanged(CFNotificationCenterRef center, void *observer, CFSt
 %ctor {
 	@autoreleasepool {
 		LoadSettings();
-		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, SettingsChanged, CFSTR("name.ridgewell.InstapaperActivity.settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, SettingsChanged, CFSTR("APP_ID.settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 	}
 }

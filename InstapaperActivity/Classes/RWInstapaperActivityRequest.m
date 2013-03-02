@@ -1,18 +1,18 @@
 //
-//  InstapaperActivityRequest.m
+//  RWInstapaperActivityRequest.m
 //  InstapaperActivity
 //
 //  Created by Justin Ridgewell on 2/28/13.
 //
 //
 
-#import "InstapaperActivityRequest.h"
+#import "RWInstapaperActivityRequest.h"
 #import "ZYInstapaperActivityItem.h"
 
 #define RESPONSE_SUCCESS            @"201"
 #define RESPONSE_PASSWORD_INCORRECT @"403"
 
-@interface InstapaperActivityRequest ()
+@interface RWInstapaperActivityRequest ()
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *password;
 @property (strong, nonatomic) NSURLConnection *connection;
@@ -22,7 +22,7 @@
 - (void)startRequestWithItem:(ZYInstapaperActivityItem *)item;
 @end
 
-@implementation InstapaperActivityRequest
+@implementation RWInstapaperActivityRequest
 
 - (id)initWithItem:(ZYInstapaperActivityItem *)item username:(NSString *)username password:(NSString *)password delegate:(id<ZYInstapaperAddRequestDelegate>)delegate {
     if (item == nil) {

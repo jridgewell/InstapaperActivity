@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		213D597E16DDE612009D3C47 /* UIInstapaperActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D597C16DDE612009D3C47 /* UIInstapaperActivity.h */; };
-		213D597F16DDE612009D3C47 /* UIInstapaperActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D597D16DDE612009D3C47 /* UIInstapaperActivity.m */; };
+		213D597E16DDE612009D3C47 /* RWInstapaperActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D597C16DDE612009D3C47 /* RWInstapaperActivity.h */; };
+		213D597F16DDE612009D3C47 /* RWInstapaperActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D597D16DDE612009D3C47 /* RWInstapaperActivity.m */; };
 		213D598216DDF36D009D3C47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213D598016DDF361009D3C47 /* UIKit.framework */; };
 		213D59E416DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */; };
 		213D59E516DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */; };
 		213D59F116DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59EC16DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h */; };
 		213D59F216DF161B009D3C47 /* ZYInstapaperActivityItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59ED16DF161B009D3C47 /* ZYInstapaperActivityItem.h */; };
 		213D59F316DF161B009D3C47 /* ZYInstapaperActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59EE16DF161B009D3C47 /* ZYInstapaperActivityItem.m */; };
-		213D59F616DF303B009D3C47 /* InstapaperActivityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59F416DF303B009D3C47 /* InstapaperActivityRequest.h */; };
-		213D59F716DF303B009D3C47 /* InstapaperActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59F516DF303B009D3C47 /* InstapaperActivityRequest.m */; };
+		213D59F616DF303B009D3C47 /* RWInstapaperActivityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 213D59F416DF303B009D3C47 /* RWInstapaperActivityRequest.h */; };
+		213D59F716DF303B009D3C47 /* RWInstapaperActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 213D59F516DF303B009D3C47 /* RWInstapaperActivityRequest.m */; };
 		2176FC0716DD55B600750E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2176FC0616DD55B600750E5C /* Foundation.framework */; };
 		2176FC1816DD55B600750E5C /* InstapaperActivity.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2176FC1716DD55B600750E5C /* InstapaperActivity.mm */; };
 		21F2E88A16DDBA0D000A92E0 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		213D597C16DDE612009D3C47 /* UIInstapaperActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInstapaperActivity.h; sourceTree = "<group>"; };
-		213D597D16DDE612009D3C47 /* UIInstapaperActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIInstapaperActivity.m; sourceTree = "<group>"; };
+		213D597C16DDE612009D3C47 /* RWInstapaperActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWInstapaperActivity.h; sourceTree = "<group>"; };
+		213D597D16DDE612009D3C47 /* RWInstapaperActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWInstapaperActivity.m; sourceTree = "<group>"; };
 		213D598016DDF361009D3C47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		213D598F16DEEEC6009D3C47 /* SpringBoard.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = SpringBoard.app; sourceTree = "<group>"; };
 		213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageNamedExtension.h"; sourceTree = "<group>"; };
@@ -33,8 +33,8 @@
 		213D59EC16DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYInstapaperAddRequestDelegate.h; sourceTree = "<group>"; };
 		213D59ED16DF161B009D3C47 /* ZYInstapaperActivityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYInstapaperActivityItem.h; sourceTree = "<group>"; };
 		213D59EE16DF161B009D3C47 /* ZYInstapaperActivityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYInstapaperActivityItem.m; sourceTree = "<group>"; };
-		213D59F416DF303B009D3C47 /* InstapaperActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstapaperActivityRequest.h; sourceTree = "<group>"; };
-		213D59F516DF303B009D3C47 /* InstapaperActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstapaperActivityRequest.m; sourceTree = "<group>"; };
+		213D59F416DF303B009D3C47 /* RWInstapaperActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWInstapaperActivityRequest.h; sourceTree = "<group>"; };
+		213D59F516DF303B009D3C47 /* RWInstapaperActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWInstapaperActivityRequest.m; sourceTree = "<group>"; };
 		2176FC0316DD55B600750E5C /* InstapaperActivity.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = InstapaperActivity.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		2176FC0616DD55B600750E5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2176FC0C16DD55B600750E5C /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
@@ -95,10 +95,10 @@
 			children = (
 				213D59E216DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h */,
 				213D59E316DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m */,
-				213D597C16DDE612009D3C47 /* UIInstapaperActivity.h */,
-				213D597D16DDE612009D3C47 /* UIInstapaperActivity.m */,
-				213D59F416DF303B009D3C47 /* InstapaperActivityRequest.h */,
-				213D59F516DF303B009D3C47 /* InstapaperActivityRequest.m */,
+				213D597C16DDE612009D3C47 /* RWInstapaperActivity.h */,
+				213D597D16DDE612009D3C47 /* RWInstapaperActivity.m */,
+				213D59F416DF303B009D3C47 /* RWInstapaperActivityRequest.h */,
+				213D59F516DF303B009D3C47 /* RWInstapaperActivityRequest.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -241,11 +241,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213D597E16DDE612009D3C47 /* UIInstapaperActivity.h in Headers */,
+				213D597E16DDE612009D3C47 /* RWInstapaperActivity.h in Headers */,
 				213D59E416DF0DEA009D3C47 /* UIImage+ImageNamedExtension.h in Headers */,
 				213D59F116DF161B009D3C47 /* ZYInstapaperAddRequestDelegate.h in Headers */,
 				213D59F216DF161B009D3C47 /* ZYInstapaperActivityItem.h in Headers */,
-				213D59F616DF303B009D3C47 /* InstapaperActivityRequest.h in Headers */,
+				213D59F616DF303B009D3C47 /* RWInstapaperActivityRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2176FC1816DD55B600750E5C /* InstapaperActivity.mm in Sources */,
-				213D597F16DDE612009D3C47 /* UIInstapaperActivity.m in Sources */,
+				213D597F16DDE612009D3C47 /* RWInstapaperActivity.m in Sources */,
 				213D59E516DF0DEA009D3C47 /* UIImage+ImageNamedExtension.m in Sources */,
 				213D59F316DF161B009D3C47 /* ZYInstapaperActivityItem.m in Sources */,
-				213D59F716DF303B009D3C47 /* InstapaperActivityRequest.m in Sources */,
+				213D59F716DF303B009D3C47 /* RWInstapaperActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,25 +1,25 @@
 //
-//  UIInstapaperActivity.m
+//  RWInstapaperActivity.m
 //  InstapaperActivity
 //
 //  Created by Justin Ridgewell on 2/27/13.
 //
 //
 
-#import "UIInstapaperActivity.h"
-#import "InstapaperActivityRequest.h"
+#import "RWInstapaperActivity.h"
+#import "RWInstapaperActivityRequest.h"
 
-@interface UIInstapaperActivity ()
+@interface RWInstapaperActivity ()
 
 @property (strong, nonatomic) NSArray *validURLSchemes;
 @property (strong, nonatomic) NSMutableArray *activityItems;
-@property (strong, nonatomic) InstapaperActivityRequest *request;
+@property (strong, nonatomic) RWInstapaperActivityRequest *request;
 - (ZYInstapaperActivityItem *)canPerformWithActivityItem:(id)item;
 
 @end
 
 
-@implementation UIInstapaperActivity
+@implementation RWInstapaperActivity
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -41,7 +41,7 @@
 }
 
 - (NSString *)activityType {
-	return @"UIInstapaperActivity.InstapaperActivity";
+	return APP_ID;
 }
 
 - (NSString *)activityTitle {
@@ -121,7 +121,7 @@
 	[self.activityItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 		ZYInstapaperActivityItem *item = (ZYInstapaperActivityItem *)obj;
 		DLog(@"%@", item);
-		self.request = [[InstapaperActivityRequest alloc] initWithItem:item username:self.username password:self.password delegate:self];
+		self.request = [[RWInstapaperActivityRequest alloc] initWithItem:item username:self.username password:self.password delegate:self];
     }];
 }
 
