@@ -83,24 +83,25 @@
 }
 
 - (ZYInstapaperActivityItem *)canPerformWithActivityItem:(id)item {
-	ZYInstapaperActivityItem *activityItem = nil;
-	
 	//If it's a well formated URL string.
 	if ([item isKindOfClass:[NSString class]] == YES) {
+		DLog(@"NSString URL: %@", item);
 		item = [NSURL URLWithString:item];
 	}
 	//If it's a non-empty URL.
 	if ([item isKindOfClass:[NSURL class]] == YES) {
+		DLog(@"NSURL: %@", [item absoluteString]);
 		NSString *scheme = [item scheme];
+		DLog(@"Scheme: %@", scheme);
 		if ([self.validURLSchemes containsObject:scheme]) {
-			activityItem = [[ZYInstapaperActivityItem alloc] initWithURL:item];
+			item = [[ZYInstapaperActivityItem alloc] initWithURL:item];
 		}
 	}
-	DLog(@"%@", activityItem);
+	DLog(@"%@", item);
 
 	//If it's an InstapaperActivityItem (internal, non-empty URL is guaranteed).
 	if ([item isKindOfClass:[ZYInstapaperActivityItem class]] == YES) {
-		return activityItem;
+		return item;
 	}
 	
 	return nil;
