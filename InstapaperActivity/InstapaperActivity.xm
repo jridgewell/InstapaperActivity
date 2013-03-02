@@ -13,7 +13,9 @@ static NSString *instapaperPassword;
 - (NSArray *)excludedActivityTypes {
 	NSArray *originalExcludes = %orig;
 	if (instapaperActivityIsEnabled) {
-		originalExcludes = [originalExcludes arrayByAddingObject:READING_LIST_ACTIVITY_TYPE];
+		NSMutableArray *excludes = [NSMutableArray arrayWithArray:originalExcludes];
+		[excludes addObject:READING_LIST_ACTIVITY_TYPE];
+		originalExcludes = excludes;
 	}
 	return originalExcludes;
 }

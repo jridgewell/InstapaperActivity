@@ -20,7 +20,9 @@ static NSArray * (*_logos_orig$_ungrouped$UIActivityViewController$excludedActiv
 static NSArray * _logos_method$_ungrouped$UIActivityViewController$excludedActivityTypes(UIActivityViewController* self, SEL _cmd) {
 	NSArray *originalExcludes = _logos_orig$_ungrouped$UIActivityViewController$excludedActivityTypes(self, _cmd);
 	if (instapaperActivityIsEnabled) {
-		originalExcludes = [originalExcludes arrayByAddingObject:READING_LIST_ACTIVITY_TYPE];
+		NSMutableArray *excludes = [NSMutableArray arrayWithArray:originalExcludes];
+		[excludes addObject:READING_LIST_ACTIVITY_TYPE];
+		originalExcludes = excludes;
 	}
 	return originalExcludes;
 }
