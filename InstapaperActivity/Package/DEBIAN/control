@@ -1,6 +1,6 @@
 Package: name.ridgewell.InstapaperActivity
 Name: InstapaperActivity
-Version: 0.0.1
+Version: 0.1
 Description: 
 Section: System
 Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader
