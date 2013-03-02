@@ -46,6 +46,8 @@
 		2176FC1616DD55B600750E5C /* InstapaperActivity.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InstapaperActivity.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2176FC1716DD55B600750E5C /* InstapaperActivity.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InstapaperActivity.mm; sourceTree = "<group>"; };
 		2176FC1B16DD55B600750E5C /* InstapaperActivity.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = InstapaperActivity.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/InstapaperActivity.plist; sourceTree = "<group>"; };
+		21950B0316E1D6C70090437F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		21950B0416E1D6EC0090437F /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		21F2E88816DDB9EB000A92E0 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = /opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,8 @@
 		2176FBF816DD55B600750E5C = {
 			isa = PBXGroup;
 			children = (
+				21950B0316E1D6C70090437F /* README.md */,
+				21950B0416E1D6EC0090437F /* LICENSE.md */,
 				2176FC0816DD55B600750E5C /* InstapaperActivity */,
 				2176FC0516DD55B600750E5C /* Frameworks */,
 				2176FC0416DD55B600750E5C /* Products */,
