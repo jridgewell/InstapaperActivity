@@ -82,21 +82,13 @@
 	}
 	//If it's a non-empty URL.
 	else if ([item isKindOfClass:[NSURL class]] == YES) {
-#if __has_feature(objc_arc)
 		activityItem = [[ZYInstapaperActivityItem alloc] initWithURL:item];
-#else
-		activityItem = [[[ZYInstapaperActivityItem alloc] initWithURL:item] autorelease];
-#endif
 	}
 	//If it's a well formated URL string.
 	else if ([item isKindOfClass:[NSString class]] == YES) {
 		NSURL *url = [NSURL URLWithString:item];
 		if (url) {
-#if __has_feature(objc_arc)
 			activityItem = [[ZYInstapaperActivityItem alloc] initWithURL:item];
-#else
-			activityItem = [[[ZYInstapaperActivityItem alloc] initWithURL:item] autorelease];
-#endif
 		}
 	}
 	
@@ -105,9 +97,6 @@
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
-	if (!self.activityItems) {
-		self.activityItems = [NSMutableArray array];
-	}
 	[activityItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 		ZYInstapaperActivityItem *item = [self canPerformWithActivityItem:obj];
         if (item) {
@@ -131,43 +120,28 @@
 
 - (void)instapaperAddRequestSucceded:(id)request {
 	DLog();
-#if !__has_feature(objc_arc)
-	[self.request release];
-#endif
 	[self activityDidFinish:YES];
 }
 
 - (void)instapaperAddRequestFailed:(id)request {
 	DLog();
-#if !__has_feature(objc_arc)
-	[self.request release];
-#endif
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failure", @"")
 													message:NSLocalizedString(@"An unexpected error occured. Try again later.", @"")
 												   delegate:nil
 										  cancelButtonTitle:NSLocalizedString(@"OK", @"")
 										  otherButtonTitles:nil];
 	[alert show];
-#if !__has_feature(objc_arc)
-	[alert release];
-#endif
 	[self activityDidFinish:NO];
 }
 
 - (void)instapaperAddRequestIncorrectPassword:(id)request {
 	DLog();
-#if !__has_feature(objc_arc)
-	[self.request release];
-#endif
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"")
 													message:NSLocalizedString(@"Incorrect password. Please correct in Settings.app", @"")
 												   delegate:nil
 										  cancelButtonTitle:NSLocalizedString(@"OK", @"")
 										  otherButtonTitles:nil];
 	[alert show];
-#if !__has_feature(objc_arc)
-	[alert release];
-#endif
 	[self activityDidFinish:NO];
 }
 
